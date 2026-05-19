@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>Impressum – Kindling Medienrecht</title>
+    <meta name="description" content="Impressum der Kanzlei Kindling Medienrecht, Rechtsanwalt Dr. Richard Kindling, Köln.">
     <style>
         * {
             margin: 0;
@@ -11,108 +13,129 @@
             box-sizing: border-box;
         }
         html, body {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            background: #f5f5f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100%;
         }
-        .pdf-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        html {
+            -webkit-text-size-adjust: 100%;
+            background: rgb(68, 68, 60);
         }
-        /* Desktop: PDF embed */
-        .pdf-embed {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-        /* Mobil-Fallback: gerenderte Seiten als Bilder via PDF.js */
-        #mobile-viewer {
-            display: none;
-            width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-            background: #525659;
-            padding: 10px 0;
-        }
-        #mobile-viewer canvas {
-            display: block;
-            margin: 10px auto;
-            max-width: 95%;
-            height: auto;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            background: white;
-        }
-        .loading {
-            color: white;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #d8d8d4;
+            background: rgb(68, 68, 60);
             text-align: center;
-            padding: 40px 20px;
-            font-size: 14px;
+            padding: 3rem 1.5rem 4rem;
         }
-        /* Mobile detection via media query */
-        @media (max-width: 768px), (hover: none) and (pointer: coarse) {
-            .pdf-embed { display: none; }
-            #mobile-viewer { display: block; }
+        .page {
+            max-width: 17cm;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 1.8em;
+            letter-spacing: 0.02em;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        p + p,
+        p + .bold,
+        ul + p,
+        ul + .bold,
+        .spacer + .bold {
+            margin-top: 0.9em;
+        }
+        .section-gap {
+            margin-top: 1.8em;
+        }
+        a {
+            color: inherit;
+            text-decoration: underline;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+        ul {
+            list-style: none;
+            margin: 0.5em auto 0;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+        ul li {
+            position: relative;
+            padding-left: 1.2em;
+            margin-bottom: 0.15em;
+        }
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0.2em;
+            top: 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 10.5pt;
+                padding: 2rem 1rem 3rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <!-- Desktop: natives PDF-Rendering -->
-        <object class="pdf-embed" data="impressum.pdf#toolbar=0&navpanes=0&view=FitH" type="application/pdf">
-            <iframe class="pdf-embed" src="impressum.pdf#toolbar=0&navpanes=0&view=FitH"></iframe>
-        </object>
+    <div class="page">
+        <h1>IMPRESSUM</h1>
 
-        <!-- Mobil: PDF.js rendert Seiten als Canvas (kein Download-Dialog) -->
-        <div id="mobile-viewer">
-            <div class="loading" id="loading">Impressum wird geladen…</div>
-        </div>
+        <p class="bold">Verantwortlich für den Inhalt nach § 5 DDG und § 18 Abs. 2 MStV:</p>
+        <p class="bold">KINDLING MEDIENRECHT</p>
+        <p>Rechtsanwalt Dr. Richard Kindling</p>
+        <p>Rudolfplatz 3</p>
+        <p>50674 Köln</p>
+        <p><a href="mailto:kanzlei@kindling-medienrecht.de">kanzlei@kindling-medienrecht.de</a></p>
+
+        <p class="section-gap">Verantwortlicher nach § 18 Abs. 2 MStV:<br>
+        Dr. Richard Kindling</p>
+
+        <p class="bold section-gap">Zuständige Rechtsanwaltskammer</p>
+        <p>Ich bin nach dem Recht der Bundesrepublik Deutschland zugelassen und Mitglied der Rechtsanwaltskammer Köln, <a href="https://www.google.com/maps/search/?api=1&query=Riehler+Str.+30+50668+K%C3%B6ln">Riehler Str. 30, 50668 Köln</a>,</p>
+        <p><a href="https://www.rak-koeln.de/" target="_blank" rel="noopener">https://www.rak-koeln.de/</a>, <a href="mailto:kontakt@rak-koeln.de">kontakt@rak-koeln.de</a></p>
+
+        <p class="bold section-gap">Berufsrechtliche Regelungen</p>
+        <p>Es gelten die folgenden berufsrechtlichen Regelungen:</p>
+        <ul>
+            <li><a href="https://www.gesetze-im-internet.de/brao/" target="_blank" rel="noopener">Bundesrechtsanwaltsordnung</a> (BRAO)</li>
+            <li><a href="https://www.brak.de/fuer-anwaelte/berufsrecht/" target="_blank" rel="noopener">Berufsordnung für Rechtsanwälte</a> (BORA)</li>
+            <li><a href="https://www.gesetze-im-internet.de/fao/" target="_blank" rel="noopener">Fachanwaltsordnung</a> (FAO)</li>
+            <li><a href="https://www.gesetze-im-internet.de/eurag/" target="_blank" rel="noopener">Gesetz über die Tätigkeit europäischer Rechtsanwälte in Deutschland</a> (EuRAG)</li>
+            <li><a href="https://www.ccbe.eu/" target="_blank" rel="noopener">Berufsregeln der Rechtsanwälte der Europäischen Union</a> (CCBE)</li>
+            <li><a href="https://www.gesetze-im-internet.de/rvg/" target="_blank" rel="noopener">RVG – Rechtsanwaltsvergütungsgesetz</a></li>
+            <li><a href="https://www.brak.de/" target="_blank" rel="noopener">Anordnung der Bundesrechtsanwaltskammer</a> nach § 9 Abs. 4 Satz 2 des Geldwäschebekämpfungsgesetzes (GwG)</li>
+            <li><a href="https://www.brak.de/" target="_blank" rel="noopener">Verhaltensempfehlungen der Bundesrechtsanwaltskammer für Rechtsanwälte im Hinblick auf die Vorschriften des Geldwäschebekämpfungsgesetzes (GwG) und die Geldwäsche, § 261 StGB</a></li>
+            <li>Verordnung über die Rechtsanwaltsverzeichnisse und die besonderen elektronischen Anwaltspostfächer</li>
+        </ul>
+        <p style="margin-top: 0.9em;">Alle berufsrechtlichen Regelungen sind auf den Seiten der Bundesrechtsanwaltskammer in der jeweils aktuell geltenden Fassung abrufbar: <a href="https://www.brak.de/anwaltschaft/berufsrecht/" target="_blank" rel="noopener">https://www.brak.de/anwaltschaft/berufsrecht/</a>.</p>
+
+        <p class="bold section-gap">Angaben zur Berufshaftpflichtversicherung</p>
+        <p>Ich bin aufgrund gesetzlicher Bestimmung in der BRAO verpflichtet, eine Berufshaftpflichtversicherung abzuschließen. Berufshaftpflichtversicherer ist die:</p>
+
+        <p class="section-gap">R+V Allgemeine Versicherung AG<br>
+        Raiffeisenplatz 1<br>
+        65189 Wiesbaden<br>
+        <a href="https://www.ruv.de" target="_blank" rel="noopener">www.ruv.de</a></p>
+
+        <p class="section-gap">Räumlicher Geltungsbereich: zumindest im gesamten EU&#8209;Gebiet, womit den Anforderungen des § 51 BRAO genügt wird.</p>
+
+        <p class="bold section-gap">Hinweis nach § 36 Abs. 1 VSBG</p>
+        <p>Es besteht keine Bereitschaft und keine Verpflichtung zur Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.</p>
+
+        <p class="bold section-gap">Datenschutz</p>
+        <p>Unseren Datenschutzbeauftragten erreichen Sie unter:<br>
+        <a href="mailto:kanzlei@kindling-medienrecht.de">kanzlei@kindling-medienrecht.de</a></p>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script>
-        // Nur auf Mobilgeräten PDF.js verwenden
-        const isMobile = window.matchMedia('(max-width: 768px), (hover: none) and (pointer: coarse)').matches;
-
-        if (isMobile && window.pdfjsLib) {
-            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-            const viewer = document.getElementById('mobile-viewer');
-            const loading = document.getElementById('loading');
-
-            pdfjsLib.getDocument('impressum.pdf').promise.then(async (pdf) => {
-                loading.remove();
-                const containerWidth = viewer.clientWidth * 0.95;
-
-                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                    const page = await pdf.getPage(pageNum);
-                    const viewport = page.getViewport({ scale: 1 });
-                    const scale = (containerWidth / viewport.width) * (window.devicePixelRatio || 1);
-                    const scaledViewport = page.getViewport({ scale });
-
-                    const canvas = document.createElement('canvas');
-                    canvas.width = scaledViewport.width;
-                    canvas.height = scaledViewport.height;
-                    canvas.style.width = (scaledViewport.width / (window.devicePixelRatio || 1)) + 'px';
-
-                    viewer.appendChild(canvas);
-
-                    await page.render({
-                        canvasContext: canvas.getContext('2d'),
-                        viewport: scaledViewport
-                    }).promise;
-                }
-            }).catch((err) => {
-                loading.textContent = 'PDF konnte nicht geladen werden.';
-                console.error(err);
-            });
-        }
-    </script>
 </body>
 </html>
